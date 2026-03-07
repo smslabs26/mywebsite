@@ -222,31 +222,39 @@ width:60px;
 </div>
 
 </section>
-<section id="booking" class="services">
+```html
+<section id="booking">
+
+<div class="booking-card">
 
 <h2>Book a Lab Test</h2>
 
 <form onsubmit="sendWhatsApp(); return false;">
 
-<input type="text" id="name" placeholder="Your Name" required><br><br>
+<input type="text" id="name" placeholder="Your Name" required>
 
-<input type="tel" id="phone" placeholder="Phone Number" required><br><br>
+<input type="tel" id="phone" placeholder="Phone Number" required>
 
 <select id="test">
+<option>Select Test</option>
 <option>Blood Test</option>
 <option>ECG Test</option>
 <option>X-Ray</option>
 <option>Semen Analysis</option>
 <option>COVID RT PCR Test</option>
-</select><br><br>
+</select>
 
-<input type="date" id="date" required><br><br>
+<input type="date" id="date" required>
 
 <button type="submit" class="btn">Send Booking</button>
 
 </form>
 
+</div>
+
 </section>
+```
+
 <section class="contact" id="contact">
 <h2>Contact Us</h2>
 <p><b>Location:</b> Vadapalani, Chennai</p>
@@ -281,5 +289,6 @@ window.open(url,"_blank");
 </script>
 </body>
 </html>
+
 
 
