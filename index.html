@@ -1,9 +1,12 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
 <title>SMS LABS Vadapalani | Medical Laboratory Chennai</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <meta name="description" content="SMS Labs Vadapalani - Blood Test, Medical Lab Services in Chennai. Fast and reliable diagnostic services.">
 
 <meta name="keywords" content="SMS Labs, Vadapalani Lab, Blood Test Chennai, Medical Laboratory Vadapalani, Diagnostic Center Chennai">
@@ -14,17 +17,15 @@
 
 <meta name="robots" content="index, follow">
 
-<meta name="description" content="SMS LABS Medical Laboratory in Vadapalani Chennai. Blood tests, ECG, X-Ray, Semen Analysis and more.">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
 
 body{
-font-family:Arial;
+font-family:'Poppins', sans-serif;
 margin:0;
 background:#f4f8fb;
 }
+
+/* HEADER */
 
 header{
 background:#0b3c5d;
@@ -39,11 +40,8 @@ display:block;
 margin:auto;
 margin-bottom:10px;
 }
-<section class="hero">
-<h1>Welcome to SMS LABS</h1>
-<p>Accurate & Reliable Diagnostic Services in Vadapalani</p>
-<button class="btn">Book a Test</button>
-</section>
+
+/* NAVIGATION */
 
 nav{
 background:#06283D;
@@ -55,35 +53,83 @@ nav a{
 color:white;
 margin:15px;
 text-decoration:none;
-font-weight:bold;
+font-weight:500;
 }
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* HERO SECTION */
 
 .hero{
-padding:60px;
+background:linear-gradient(135deg,#0b3c5d,#1f6fa5);
+color:white;
+padding:70px 20px;
 text-align:center;
-background:white;
 }
+
+.hero h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.btn{
+background:white;
+color:#0b3c5d;
+border:none;
+padding:12px 25px;
+font-size:16px;
+border-radius:25px;
+cursor:pointer;
+font-weight:600;
+}
+
+.btn:hover{
+background:#e6e6e6;
+}
+
+/* SERVICES */
 
 .services{
-padding:40px;
+padding:50px 20px;
 text-align:center;
 }
 
-.service-box{
-background:white;
-display:inline-block;
-width:220px;
-margin:15px;
-padding:20px;
-border-radius:8px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
 }
+
+.card{
+background:white;
+width:220px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover{
+transform:translateY(-6px);
+transition:0.3s;
+}
+
+/* CONTACT */
 
 .contact{
 background:#eef3f7;
-padding:40px;
+padding:50px 20px;
 text-align:center;
 }
+
+/* FOOTER */
 
 footer{
 background:#06283D;
@@ -92,10 +138,16 @@ text-align:center;
 padding:15px;
 }
 
+/* WHATSAPP */
+
 .whatsapp-button{
 position:fixed;
 bottom:20px;
 right:20px;
+}
+
+.whatsapp-button img{
+width:60px;
 }
 
 </style>
@@ -104,13 +156,7 @@ right:20px;
 
 <body>
 
-<header>
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
+<header id="home">
 
 <img src="logo.png" class="logo" alt="SMS LABS Logo">
 
@@ -120,7 +166,8 @@ right:20px;
 </header>
 
 <nav>
-<a href="#">Home</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -129,13 +176,25 @@ right:20px;
 
 <h2>Trusted Medical Laboratory in Vadapalani</h2>
 
-<p>All type of blood tests available with accurate and reliable results.</p>
+<p>All types of blood tests with accurate and reliable results.</p>
+
+<button class="btn">Book a Test</button>
+
+</section>
+
+<section id="about" class="services">
+
+<h2>About SMS Labs</h2>
+
+<p>SMS Labs Vadapalani provides reliable diagnostic services including blood tests, ECG, X-Ray and fertility testing with modern laboratory equipment.</p>
 
 </section>
 
 <section class="services" id="services">
 
 <h2>Our Services</h2>
+
+<div class="cards">
 
 <div class="card">
 <h3>Blood Test</h3>
@@ -160,6 +219,8 @@ right:20px;
 <div class="card">
 <h3>COVID RT PCR Test</h3>
 <p>Reliable COVID diagnostic testing.</p>
+</div>
+
 </div>
 
 </section>
@@ -191,15 +252,10 @@ loading="lazy">
 
 <a href="https://wa.me/918778705003" class="whatsapp-button" target="_blank">
 
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="60" alt="WhatsApp">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 
 </a>
 
 </body>
 </html>
-
-
-
-
-
-
+```
