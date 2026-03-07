@@ -249,7 +249,6 @@ width:60px;
 </div>
 
 </section>
-
 <section id="booking">
 
 <div class="booking-card">
@@ -258,10 +257,18 @@ width:60px;
 
 <form onsubmit="sendWhatsApp(); return false;">
 
+<div class="input-group">
+<span>👤</span>
 <input type="text" id="name" placeholder="Your Name" required>
+</div>
 
+<div class="input-group">
+<span>📞</span>
 <input type="tel" id="phone" placeholder="Phone Number" required>
+</div>
 
+<div class="input-group">
+<span>🧪</span>
 <select id="test">
 <option>Select Test</option>
 <option>Blood Test</option>
@@ -270,8 +277,12 @@ width:60px;
 <option>Semen Analysis</option>
 <option>COVID RT PCR Test</option>
 </select>
+</div>
 
+<div class="input-group">
+<span>📅</span>
 <input type="date" id="date" required>
+</div>
 
 <button type="submit" class="btn">Send Booking</button>
 
@@ -280,6 +291,7 @@ width:60px;
 </div>
 
 </section>
+
 
 <section class="contact" id="contact">
 
@@ -333,6 +345,7 @@ window.open(url,"_blank");
 
 </body>
 </html>
+
 
 
 
