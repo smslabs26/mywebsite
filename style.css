@@ -1,60 +1,50 @@
+```css
 body{
-font-family:Arial;
+font-family:Arial, sans-serif;
 margin:0;
+background:#f4f8fb;
 text-align:center;
 }
 
+/* HEADER */
+
 header{
-background:#222;
+background:#0b3c5d;
 color:white;
-padding:40px;
+padding:30px 20px;
 }
 
+.logo{
+width:220px;
+display:block;
+margin:auto;
+margin-bottom:10px;
+}
+
+/* NAVIGATION */
+
 nav{
-background:#444;
-padding:10px;
+background:#06283D;
+padding:12px;
 }
 
 nav a{
 color:white;
 margin:15px;
 text-decoration:none;
+font-weight:bold;
 }
 
-section{
-padding:40px;
+nav a:hover{
+text-decoration:underline;
 }
 
-footer{
-background:#222;
-color:white;
-padding:20px;
-}
+/* HERO SECTION */
 
-.whatsapp-button:hover{
-background:#1ebe5d;
-}
-.whatsapp-button{
-position:fixed;
-bottom:20px;
-right:20px;
-}
-
-.whatsapp-button img{
-width:60px;
-height:60px;
-}
-.logo{
-width:360px;
-display:block;
-margin:auto;
-margin-bottom:10px;
-}
 .hero{
-background: linear-gradient(135deg,#0b3c5d,#1f6fa5);
+background:linear-gradient(135deg,#0b3c5d,#1f6fa5);
 color:white;
 padding:60px 20px;
-text-align:center;
 border-radius:10px;
 margin:20px;
 }
@@ -69,6 +59,8 @@ font-size:18px;
 margin-bottom:20px;
 }
 
+/* BUTTON */
+
 .btn{
 background:white;
 color:#0b3c5d;
@@ -77,11 +69,14 @@ padding:12px 25px;
 font-size:16px;
 border-radius:25px;
 cursor:pointer;
+font-weight:bold;
 }
 
 .btn:hover{
 background:#e6e6e6;
 }
+
+/* SERVICES */
 
 .services{
 display:flex;
@@ -98,12 +93,49 @@ width:220px;
 border-radius:10px;
 box-shadow:0px 4px 15px rgba(0,0,0,0.1);
 text-align:center;
-}
-
-.card:hover{
-transform:translateY(-5px);
 transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-6px);
+}
 
+/* SECTIONS */
 
+section{
+padding:40px 20px;
+}
+
+/* CONTACT */
+
+.contact{
+background:#eef3f7;
+}
+
+/* FOOTER */
+
+footer{
+background:#06283D;
+color:white;
+padding:20px;
+margin-top:30px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-button{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+
+.whatsapp-button img{
+width:60px;
+height:60px;
+}
+
+.whatsapp-button:hover{
+transform:scale(1.1);
+transition:0.3s;
+}
+```
