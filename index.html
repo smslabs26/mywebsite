@@ -280,8 +280,26 @@ loading="lazy">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 
 </a>
+<script>
 
+function sendWhatsApp(){
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var test=document.getElementById("test").value;
+var date=document.getElementById("date").value;
+
+var message="New Lab Test Booking:%0A%0AName: "+name+"%0APhone: "+phone+"%0ATest: "+test+"%0ADate: "+date;
+
+var url="https://wa.me/918778705003?text="+message;
+
+window.open(url,"_blank");
+
+}
+
+</script>
 </body>
 </html>
+
 
 
