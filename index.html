@@ -287,7 +287,9 @@ width:60px;
 <button type="submit" class="btn">Send Booking</button>
 
 </form>
-
+<p id="successMessage" style="display:none;color:green;font-weight:600;margin-top:15px;">
+✅ Booking Sent Successfully
+</p>
 </div>
 
 </section>
@@ -333,18 +335,14 @@ var phone=document.getElementById("phone").value;
 var test=document.getElementById("test").value;
 var date=document.getElementById("date").value;
 
-var message="SMS LABS Appointment Booking:%0A%0AName: "+name+"%0APhone: "+phone+"%0ATest: "+test+"%0ADate: "+date;
+var message="New Lab Test Booking:%0A%0AName: "+name+"%0APhone: "+phone+"%0ATest: "+test+"%0ADate: "+date;
 
 var url="https://wa.me/918778705003?text="+message;
 
 window.open(url,"_blank");
 
-document.getElementById("successPopup").style.display="flex";
+document.getElementById("successMessage").style.display="block";
 
-}
-
-function closePopup(){
-document.getElementById("successPopup").style.display="none";
 }
 
 </script>
@@ -357,4 +355,5 @@ document.getElementById("successPopup").style.display="none";
 </div>
 </body>
 </html>
+
 
