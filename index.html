@@ -324,6 +324,7 @@ loading="lazy">
 
 </a>
 
+```html
 <script>
 
 function sendWhatsApp(){
@@ -333,18 +334,33 @@ var phone=document.getElementById("phone").value;
 var test=document.getElementById("test").value;
 var date=document.getElementById("date").value;
 
-var message="SMS LABS Appointment Booking:%0A%0AName: "+name+"%0APhone: "+phone+"%0ATest: "+test+"%0ADate: "+date;
+var message="New Lab Test Booking:%0A%0AName: "+name+"%0APhone: "+phone+"%0ATest: "+test+"%0ADate: "+date;
 
 var url="https://wa.me/918778705003?text="+message;
 
 window.open(url,"_blank");
 
+document.getElementById("successPopup").style.display="flex";
+
+}
+
+function closePopup(){
+document.getElementById("successPopup").style.display="none";
 }
 
 </script>
+```
 
+<div id="successPopup" class="popup">
+<div class="popup-box">
+<h3>✅ Booking Sent!</h3>
+<p>Your test booking has been sent to SMS Labs.</p>
+<button onclick="closePopup()">OK</button>
+</div>
+</div>
 </body>
 </html>
+
 
 
 
