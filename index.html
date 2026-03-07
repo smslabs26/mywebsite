@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,11 +139,25 @@ flex-direction:column;
 gap:15px;
 }
 
-.booking-card input,
-.booking-card select{
-padding:12px;
-border-radius:8px;
+.input-group{
+display:flex;
+align-items:center;
+background:#f9f9f9;
 border:1px solid #ddd;
+border-radius:8px;
+padding:8px 12px;
+}
+
+.input-group span{
+margin-right:8px;
+}
+
+.input-group input,
+.input-group select{
+border:none;
+outline:none;
+background:transparent;
+flex:1;
 font-family:'Poppins', sans-serif;
 }
 
@@ -249,6 +264,7 @@ width:60px;
 </div>
 
 </section>
+
 <section id="booking">
 
 <div class="booking-card">
@@ -287,10 +303,10 @@ width:60px;
 <button type="submit" class="btn">Send Booking</button>
 
 </form>
+
 </div>
 
 </section>
-
 
 <section class="contact" id="contact">
 
@@ -332,26 +348,15 @@ var phone=document.getElementById("phone").value;
 var test=document.getElementById("test").value;
 var date=document.getElementById("date").value;
 
-var message="New Lab Test Booking:%0A%0AName: "+name+"%0APhone: "+phone+"%0ATest: "+test+"%0ADate: "+date;
+var message="SMS LABS Appointment Booking:%0A%0AName: "+name+"%0APhone: "+phone+"%0ATest: "+test+"%0ADate: "+date;
 
 var url="https://wa.me/918778705003?text="+message;
 
 window.open(url,"_blank");
 
-document.getElementById("successMessage").style.display="block";
-
 }
 
 </script>
-<div id="successPopup" class="popup">
-<div class="popup-box">
-<h3>✅ Booking Sent!</h3>
-<p>Your test booking has been sent to SMS Labs.</p>
-<button onclick="closePopup()">OK</button>
-</div>
-</div>
+
 </body>
 </html>
-
-
-
