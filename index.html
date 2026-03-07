@@ -176,7 +176,7 @@ width:60px;
 
 <p>All types of blood tests with accurate and reliable results.</p>
 
-<button class="btn">Book a Test</button>
+<a href="#booking" class="btn">Book a Test</a>
 
 </section>
 
@@ -222,6 +222,33 @@ width:60px;
 </div>
 
 </section>
+```html
+<section id="booking" class="services">
+
+<h2>Book a Lab Test</h2>
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Your Name" required><br><br>
+
+<input type="tel" id="phone" placeholder="Phone Number" required><br><br>
+
+<select id="test">
+<option>Blood Test</option>
+<option>ECG Test</option>
+<option>X-Ray</option>
+<option>Semen Analysis</option>
+<option>COVID RT PCR Test</option>
+</select><br><br>
+
+<input type="date" id="date" required><br><br>
+
+<button type="submit" class="btn">Send Booking</button>
+
+</form>
+
+</section>
+```
 
 <section class="contact" id="contact">
 
@@ -256,4 +283,5 @@ loading="lazy">
 
 </body>
 </html>
+
 
