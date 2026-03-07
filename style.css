@@ -138,5 +138,13 @@ height:60px;
 transform:scale(1.1);
 transition:0.3s;
 }
-```
+
+form input, form select{
+width:250px;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+font-family:'Poppins', sans-serif;
+}
+
 
