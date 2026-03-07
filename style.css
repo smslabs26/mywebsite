@@ -50,6 +50,38 @@ display:block;
 margin:auto;
 margin-bottom:10px;
 }
+.hero{
+background: linear-gradient(135deg,#0b3c5d,#1f6fa5);
+color:white;
+padding:60px 20px;
+text-align:center;
+border-radius:10px;
+margin:20px;
+}
+
+.hero h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.btn{
+background:white;
+color:#0b3c5d;
+border:none;
+padding:12px 25px;
+font-size:16px;
+border-radius:25px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#e6e6e6;
+}
 
 
 
