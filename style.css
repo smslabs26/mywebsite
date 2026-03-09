@@ -80,22 +80,28 @@ transform:scale(1.05);
 /* SERVICES SECTION */
 
 .services{
+padding:50px 20px;
+}
+
+.cards{
 display:flex;
 justify-content:center;
 gap:20px;
 flex-wrap:wrap;
 }
 
-.services .card{
-background:#e0e0e0;   /* grey color */
+/* SERVICE BOX */
+
+.card{
+background:#e0e0e0;   /* grey box */
 width:220px;
 padding:20px;
 border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.services .card:hover{
+.card:hover{
 background:#d6d6d6;
 transform:translateY(-6px);
 }
