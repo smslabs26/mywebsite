@@ -99,6 +99,8 @@ border:1px solid #ddd;
 
 <script>
 
+<script>
+
 function sendWhatsApp(){
 
 var name=document.getElementById("name").value;
@@ -109,13 +111,21 @@ var test=document.getElementById("test").value;
 var date=document.getElementById("date").value;
 var time=document.getElementById("time").value;
 
-var message="SMS LABS Appointment Booking:%0A%0AName: "+name+"%0AAge: "+age+"%0APhone: "+phone+"%0ATest: "+test+"%0ADate: "+date;
+var message="SMS LABS Appointment Booking:%0A%0AName: "+name+
+"%0AAge: "+age+
+"%0AGender: "+gender+
+"%0APhone: "+phone+
+"%0ATest: "+test+
+"%0ADate: "+date+
+"%0ATime: "+time;
 
 var url="https://wa.me/918778705003?text="+message;
 
 window.open(url,"_blank");
 
 }
+
+</script>
 
 </script>
 
