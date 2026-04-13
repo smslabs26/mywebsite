@@ -97,29 +97,38 @@ border:1px solid #ddd;
 
 </section>
   
+<script>
+
 function sendWhatsApp(){
 
-var name=document.getElementById("name").value;
-var age=document.getElementById("age").value;
-var gender=document.getElementById("gender").value;
-var phone=document.getElementById("phone").value;
-var test=document.getElementById("test").value;
-var date=document.getElementById("date").value;
-var time=document.getElementById("time").value;
+var name = document.getElementById("name").value;
+var age = document.getElementById("age").value;   // 👈 IMPORTANT
+var phone = document.getElementById("phone").value;
+var test = document.getElementById("test").value;
+var date = document.getElementById("date").value;
 
-var message="SMS LABS Appointment Booking:%0A%0AName: "+name+
-"%0AAge: "+age+
-"%0AGender: "+gender+
-"%0APhone: "+phone+
-"%0ATest: "+test+
-"%0ADate: "+date+
-"%0ATime: "+time;
+// (optional fields irundha)
+var genderEl = document.getElementById("gender");
+var timeEl = document.getElementById("time");
 
-var url="https://wa.me/918778705003?text="+message;
+var gender = genderEl ? genderEl.value : "";
+var time = timeEl ? timeEl.value : "";
 
-window.open(url,"_blank");
+var message = "SMS LABS Appointment Booking:%0A%0A"
++ "Name: " + name
++ "%0AAge: " + age
++ (gender ? "%0AGender: " + gender : "")
++ "%0APhone: " + phone
++ "%0ATest: " + test
++ "%0ADate: " + date
++ (time ? "%0ATime: " + time : "");
+
+var url = "https://wa.me/918778705003?text=" + message;
+
+window.open(url, "_blank");
 
 }
 
+</script>
 </body>
 </html>
