@@ -314,16 +314,6 @@ width:60px;
 <input type="date" id="date" required>
 </div>
 
-<div class="input-group">
-<span>⏰</span>
-<select id="time" required>
-<option value="">Select Time Slot</option>
-<option>Morning (7AM - 1PM)</option>
-<option>Afternoon (1PM - 5PM)</option>
-<option>Evening (5PM - 9PM)</option>
-</select>
-</div>
-
 <button type="submit" class="btn">Send Booking</button>
 
 </form>
@@ -386,8 +376,7 @@ var message = "SMS LABS Appointment Booking:%0A%0A"
 + (gender ? "%0AGender: " + gender : "")
 + "%0APhone: " + phone
 + "%0ATest: " + test
-+ "%0ADate: " + date
-+ (time ? "%0ATime: " + time : "");
++ "%0ADate: " + date;
 
 var url = "https://wa.me/918778705003?text=" + message;
 
