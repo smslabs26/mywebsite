@@ -42,6 +42,9 @@ nav{
 background:#06283D;
 padding:12px;
 text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
@@ -83,10 +86,14 @@ font-size:16px;
 border-radius:25px;
 cursor:pointer;
 font-weight:600;
+text-decoration:none;
+display:inline-block;
+transition:0.3s;
 }
 
 .btn:hover{
 background:#e6e6e6;
+transform:scale(1.05);
 }
 
 /* SERVICES */
@@ -104,11 +111,17 @@ gap:20px;
 }
 
 .card{
-background:white;
+background:#e9ecef;
 width:220px;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+background:#dfe3e6;
 }
 
 /* BOOKING FORM */
@@ -149,6 +162,7 @@ padding:8px 12px;
 
 .input-group span{
 margin-right:8px;
+font-size:18px;
 }
 
 .input-group input,
@@ -158,6 +172,7 @@ outline:none;
 background:transparent;
 flex:1;
 font-family:'Poppins', sans-serif;
+font-size:14px;
 }
 
 /* CONTACT */
@@ -187,6 +202,30 @@ right:20px;
 
 .whatsapp-button img{
 width:60px;
+transition:0.3s;
+}
+
+.whatsapp-button img:hover{
+transform:scale(1.1);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:26px;
+}
+
+.card{
+width:90%;
+}
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
 }
 
 </style>
@@ -214,7 +253,7 @@ width:60px;
 
 <section class="hero">
 
-<h2>Trusted Medical Laboratory in Vadapalani</h2>
+<h2>Trusted Medical Laboratory in Chennai</h2>
 
 <p>All types of blood tests with accurate and reliable results.</p>
 
@@ -226,7 +265,9 @@ width:60px;
 
 <h2>About SMS Labs</h2>
 
-<p>SMS Labs provides reliable diagnostic services including blood tests, ECG, X-Ray and fertility testing with modern laboratory equipment.</p>
+<p>
+SMS Labs provides reliable diagnostic services including Blood Tests, ECG, X-Ray and fertility testing using modern laboratory equipment with trusted results.
+</p>
 
 </section>
 
@@ -234,43 +275,39 @@ width:60px;
 
 <h2>Our Services</h2>
 
-<section class="branches" id="branches">
-
-
-</div>
-
-</section>
-
 <div class="cards">
 
 <div class="card">
-<h3>All Blood Test</h3>
+<h3>🩸 Blood Test</h3>
 <p>Fast and accurate blood testing services.</p>
 </div>
 
 <div class="card">
-<h3>ECG Test</h3>
+<h3>❤️ ECG Test</h3>
 <p>Heart monitoring and diagnostic services.</p>
 </div>
 
 <div class="card">
-<h3>X-Ray</h3>
+<h3>🩻 X-Ray</h3>
 <p>Advanced imaging for accurate diagnosis.</p>
 </div>
 
 <div class="card">
-<h3>Semen Analysis</h3>
+<h3>🔬 Semen Analysis</h3>
 <p>Laboratory fertility testing services.</p>
 </div>
 
 <div class="card">
-<h3>COVID RT PCR Test</h3>
+<h3>🦠 COVID RT PCR</h3>
 <p>Reliable COVID diagnostic testing.</p>
 </div>
 
 </div>
 
 </section>
+
+<section class="services" id="branches">
+
 <h2>Our Branches</h2>
 
 <div class="cards">
@@ -279,7 +316,7 @@ width:60px;
 <h3>📍 Vadapalani Branch</h3>
 <p>SMS LABS</p>
 <p>Vadapalani, Chennai</p>
-<p>📞 9500553329</p>
+<p>📞 8778705003</p>
 </div>
 
 <div class="card">
@@ -289,6 +326,9 @@ width:60px;
 <p>📞 9500553329</p>
 </div>
 
+</div>
+
+</section>
 
 <section id="booking">
 
@@ -325,8 +365,8 @@ width:60px;
 
 <div class="input-group">
 <span>🧪</span>
-<select id="test">
-<option>Select Test</option>
+<select id="test" required>
+<option value="">Select Test</option>
 <option>Blood Test</option>
 <option>ECG Test</option>
 <option>X-Ray</option>
@@ -338,6 +378,16 @@ width:60px;
 <div class="input-group">
 <span>📅</span>
 <input type="date" id="date" required>
+</div>
+
+<div class="input-group">
+<span>⏰</span>
+<select id="time" required>
+<option value="">Select Time Slot</option>
+<option>Morning (6AM - 12PM)</option>
+<option>Afternoon (12PM - 4PM)</option>
+<option>Evening (4PM - 9PM)</option>
+</select>
 </div>
 
 <button type="submit" class="btn">Send Booking</button>
@@ -370,7 +420,7 @@ loading="lazy">
 </section>
 
 <footer>
-<p>© 2026 SMS LABS | Vadapalani Chennai</p>
+<p>© 2026 SMS LABS | Chennai</p>
 </footer>
 
 <a href="https://wa.me/918778705003" class="whatsapp-button" target="_blank">
@@ -384,25 +434,22 @@ loading="lazy">
 function sendWhatsApp(){
 
 var name = document.getElementById("name").value;
-var age = document.getElementById("age").value;   // 👈 IMPORTANT
+var age = document.getElementById("age").value;
+var gender = document.getElementById("gender").value;
 var phone = document.getElementById("phone").value;
 var test = document.getElementById("test").value;
 var date = document.getElementById("date").value;
+var time = document.getElementById("time").value;
 
-// (optional fields irundha)
-var genderEl = document.getElementById("gender");
-var timeEl = document.getElementById("time");
-
-var gender = genderEl ? genderEl.value : "";
-var time = timeEl ? timeEl.value : "";
-
-var message = "SMS LABS Appointment Booking:%0A%0A"
-+ "Name: " + name
-+ "%0AAge: " + age
-+ (gender ? "%0AGender: " + gender : "")
-+ "%0APhone: " + phone
-+ "%0ATest: " + test
-+ "%0ADate: " + date;
+var message =
+"SMS LABS Appointment Booking:%0A%0A" +
+"Name: " + name +
+"%0AAge: " + age +
+"%0AGender: " + gender +
+"%0APhone: " + phone +
+"%0ATest: " + test +
+"%0ADate: " + date +
+"%0ATime Slot: " + time;
 
 var url = "https://wa.me/918778705003?text=" + message;
 
@@ -411,8 +458,6 @@ window.open(url, "_blank");
 }
 
 </script>
+
 </body>
 </html>
-
-
-
