@@ -317,6 +317,11 @@ SMS Labs provides reliable diagnostic services including Blood Tests, ECG, X-Ray
 <p>SMS LABS</p>
 <p>Vadapalani, Chennai</p>
 <p>📞 8778705003</p>
+<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.5164966270922!2d80.20774807507789!3d13.054826987268257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526788bfd9c0b1%3A0x602d690a33566cd4!2sSMS%20LABS!5e1!3m2!1sen!2sin!4v1772880521727!5m2!1sen!2sin" 
+target="_blank" 
+class="btn">
+View Location
+</a>
 </div>
 
 <div class="card">
@@ -380,16 +385,6 @@ SMS Labs provides reliable diagnostic services including Blood Tests, ECG, X-Ray
 <input type="date" id="date" required>
 </div>
 
-<div class="input-group">
-<span>⏰</span>
-<select id="time" required>
-<option value="">Select Time Slot</option>
-<option>Morning (6AM - 12PM)</option>
-<option>Afternoon (12PM - 4PM)</option>
-<option>Evening (4PM - 9PM)</option>
-</select>
-</div>
-
 <button type="submit" class="btn">Send Booking</button>
 
 </form>
@@ -439,7 +434,6 @@ var gender = document.getElementById("gender").value;
 var phone = document.getElementById("phone").value;
 var test = document.getElementById("test").value;
 var date = document.getElementById("date").value;
-var time = document.getElementById("time").value;
 
 var message =
 "SMS LABS Appointment Booking:%0A%0A" +
@@ -449,7 +443,6 @@ var message =
 "%0APhone: " + phone +
 "%0ATest: " + test +
 "%0ADate: " + date +
-"%0ATime Slot: " + time;
 
 var url = "https://wa.me/918778705003?text=" + message;
 
